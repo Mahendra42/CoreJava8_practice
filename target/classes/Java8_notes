@@ -121,5 +121,13 @@ Predicate:
     - Supplier won't take any input and it will always supply objects. Supplier Functional Interface contains only one method get().
 
 
+Method Reference :
+------------------
+•	Functional Interface method can be mapped to our specified method by using :: (double colon) operator. This is called method reference.
+•	Our specified method can be either static method or instance method.
+•	Functional Interface method and our specified method should have same argument types, except this the remaining things like
+•	returntype, methodname, modifiersetc are not required to match.
 
+
+Each time when you are using a lambda expression to just referring a method, you can replace your lambda expression with a method reference.
 
