@@ -81,5 +81,45 @@ NOTE : From 1.8 version onwards we can write main() method inside interface and 
 JAVA 8 provides predefined functional interfaces to deal with functional programming by using Lamda and method references.
 Pre Defined Functional Interfaces :
 -----------------------------------
-1. Predicate -- test(T t)-- return boolean
+Predicate:
+-------------
+    Predicate is a function interface which contains only one method i:e test()
+    it takes a value and return boolean value.
+    it is present in java.util package.
+
+    static methods :
+
+    default methods :
+        it is possible to join predicates into single predicate.
+        and(),or() and negate()
+
+
 2. Function
+-------------
+    - Functions are exactly same as predicates except that functions can return any type of result but function should (can)
+        return only one value and that value can be any type as per our requirement.
+    - it takes a value and return sth based our requirement.
+    - it has SAM has apply().
+
+    Static methods :
+
+    Defaut methods :
+    ----------------
+    andThen (function f) --> first applies function on the first function and then applies finction on the second.
+    compose() --> first on the second and then on the first function.
+
+3.Consumer :
+------------
+    - Consumer is a functional interface which takes input and doesnt return any value
+    - it has accept() ;
+    - it has andThen() default method;
+
+4.Supplier:
+------------
+    - Supply Random OTP Supply Random Password etc
+    - For this type of requirements we should go for Supplier. Supplier can be used to supply items (objects).
+    - Supplier won't take any input and it will always supply objects. Supplier Functional Interface contains only one method get().
+
+
+
+
