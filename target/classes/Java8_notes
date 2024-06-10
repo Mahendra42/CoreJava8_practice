@@ -1,0 +1,85 @@
+Functional Interface :
+----------------------
+- An interface which contains only single abstract method.
+- Java provides an annotation @FunctionalInterface, which is used to declare an interface as a functional interface.
+- eg : Runnable, Callable, Comparator, can replace its implementation with Lambda Expression.
+
+
+Lamda Expression :
+------------------
+- A lambda expression is simply a function without any name.
+- It can even be used as a parameter in a function.
+- Lambda Expression facilitates functional programming and simplifies development a lot.
+- The main use of Lambda expression is to provide an implementation for functional interfaces.
+
+Benefits of using Lamda Expression :
+------------------------------------
+- functional programming.
+- improves readability.
+- flexibility.
+- interoperability with streams.
+
+forEach() : is a default method in collection and map interface.
+
+Points needs to go through:
+----------------------------
+this Reference: Inside a lambda expression, this keyword refers to the enclosing instance, not the lambda itself.
+Performance: Lambda expressions are often more performant than anonymous classes since they are not compiled into separate classes.
+Immutable: The variables used inside lambda expressions must be final or effectively final, making them immutable.
+Local Variable Access: Lambdas can access final or effectively final local variables of the enclosing scope. 
+
+Functional Interface :
+----------------------
+- An interface that contains only single abstract method.
+- it can have any number of static, defult methods but contain only one abstarct method.it can also declare methods of object class.
+- it is a new feature in java 8 which helps in achieving a functionl progrmming approach.
+- a functional interface can extends another interface only when it doesnt have any abstract methods.
+- some of the interfaces which has SAM : runnable,Callable,Comparator etc.
+
+Anonymous InnerClasses Vs Functional Interface :
+------------------------------------------------
+Anonymous InnerClass :
+--------------------
+☀ Wherever we are using anonymous inner classes there may be a chance of using Lambda expression to reduce length of the code and to resolve complexity.
+☀ Anonymous inner class can extend concrete class, can extend abstract class, can implement interface with any number of methods but
+☀ Lambda expression can implement an interface with only single abstract method (Functional Interface).
+☀ Hence if anonymous inner class implements Functional Interface in that particular case only we can replace with lambda expressions. Hence wherever anonymous inner class concept is there, it may not possible to replace with Lambda expressions.
+☀ Anonymous inner class! = Lambda Expression
+
+☀ Inside anonymous inner class we can declare instance variables.
+☀ Inside anonymous inner class “this” always refers current inner class object(anonymous inner class) but not related  outer class object.
+
+Lamda Expression:
+----------------
+☀ Inside lambda expression we can’t declare instance variables.
+☀ Whatever the variables declare inside lambda expression are simply acts as local variables
+☀ Within lambda expression ‘this” keyword represents current outer class object reference (that is current enclosing class reference in which we declare lambda expression)
+
+Default methods inside Interface:
+---------------------------------
+- Interface default methods are by-default available to all implementation classes.
+  Based on requirement implementation class can use these default methods directly or can override.
+
+- The main advantage of default methods is without effecting implementation classes we can add new functionality to the interface (backward compatibility).
+- Note: We can’t override object class methods as default methods inside interface otherwise we get compile time error.
+
+- Even though we can add concrete methods in the form of default methods to the interface, it won’t be equal to abstract class
+
+Static methods inside Interfaces :
+-----------------------------------
+☀ From 1.8 version onwards in addition to default methods we can write static methods also inside interface to define utility functions.
+☀ Interface static methods by-default not available to the implementation classes hence by using implementation class reference we can’t call interface static
+    methods. We should call interface static methods by using interface name.
+☀ As interface static methods by default not available to the implementation class, overriding concept is not applicable.
+☀ Based on our requirement we can define exactly same method in the implementation class, it’s valid but not overriding.
+
+NOTE : From 1.8 version onwards we can write main() method inside interface and hence  we can run interface directly from the command prompt.
+
+
+
+
+JAVA 8 provides predefined functional interfaces to deal with functional programming by using Lamda and method references.
+Pre Defined Functional Interfaces :
+-----------------------------------
+1. Predicate -- test(T t)-- return boolean
+2. Function
