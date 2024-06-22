@@ -130,4 +130,7 @@ Method Reference :
 
 
 Each time when you are using a lambda expression to just referring a method, you can replace your lambda expression with a method reference.
+NOTE: in a place of lamda expresion we can replace it with methodReference.
+during methodreference the argument and type has to be matched and the remaining things like method name,return type and access modifier is not required to be same.
+
 

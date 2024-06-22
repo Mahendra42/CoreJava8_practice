@@ -1,0 +1,40 @@
+optional Classes :
+-------------------
+Java introduced a new class Optional in JDK 8.
+It is a public final class and is used to deal with NullPointerException in Java applications.
+You must import java.util package to use this class.
+It provides methods that are used to check the presence of a value for the particular variable
+
+Advantages :
+------------
+- Null checks are not required.
+- No more NullPointerException at run-time.
+- We can develop clean and neat APIs.
+- No more Boilerplate code
+
+methods :
+----------
+for creating optional objects:
+--------------------------------
+- static <T> Optional<T> empty()  -- creates empty optional object
+- static <T> Optional<T> of(T value) -- creates an optional objects if values exist else if the values is null then it throws NullPointerException
+- static <T> Optional<T> ofNullable(T value) -- creates an optional objects if values present else if the values is null it will create empty object and deosnt throw any NUllPointerException.
+
+For checking the Optional Object Content :
+---------------------------------------------
+- void ifPresent(Consumer<? super T> consumer)  - if the value present it will perform the respective operation
+- boolean isPresent() -- checks if the optional object is not null.
+- T	get() - to get value from the optional object.
+
+
+- T	orElse(T other) -- Return the value if present, otherwise return other..
+- T	orElseGet(Supplier<? extends T> other) -- Return the value if present, otherwise invoke other and return the result of that invocation.
+- T	orElseThrow(Supplier<? extends X> exceptionSupplier) -- Return the contained value, if present, otherwise throw an exception to be created by the provided supplier.
+
+- Optional<T> filter(Predicate<? super T> predicate)
+- <U> Optional<U> flatMap(Function<? super T,Optional<U>> mapper)
+- <U> Optional<U> map(Function<? super T,? extends U> mapper)
+
+- boolean equals(Object obj)
+- int hashCode()
+- String toString()

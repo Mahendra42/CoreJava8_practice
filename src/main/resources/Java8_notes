@@ -133,4 +133,11 @@ Each time when you are using a lambda expression to just referring a method, you
 NOTE: in a place of lamda expresion we can replace it with methodReference.
 during methodreference the argument and type has to be matched and the remaining things like method name,return type and access modifier is not required to be same.
 
+Static and Default methods in Interface :
+------------------------------------------
+stream() is a default method in collection interface.
 
+why default methods in interface : to avoid implemenation for the new method added to the interface and avoid issues raised because of this
+                                   and for backward compatability.
+
+Static methods : for utility methods we used static for a specific group.
